@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWENDO INDIA</title>
+</head>
+<style>
+    *{
+    margin: 0;
+  padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #fff;
+}
+
+/* ---------------Nav-bar--------------- */
+nav{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    height: 80px;
+    /* border: 1px red solid; */
+   justify-content: space-between;
+    z-index: 2;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+nav>div:nth-child(1){
+    width: 30%;
+    display: flex;
+    /* border: 1px red solid; */
+}
+nav>div:nth-child(1)>img{
+    width: 20%;
+    
+}
+nav>div:nth-child(1)>h2{
+    /* border: 1px red solid; */
+    font-size: 20px;
+    padding-top: 25px;
+    margin-left: 15px;
+    color: #004AAD;
+}
+nav>div:nth-child(1)>h2>span{
+    color: #EFAB45;
+}
+#content{
+    list-style-type: none 
+}
+.nav__link>a{
+    text-decoration: none;
+    /* border: 1px red solid; */
+    color: #000;
+    
+}
+.nav__link.active{
+    /* border: 1px red solid; */
+      color: #005cd5;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+#content{
+    /* border: 1px red solid; */
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    justify-content: end;
+    padding-right: 50px;
+}
+#content>button{
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 20px;
+    color: #004AAD;
+    background-color: white;
+    width: 80px;
+    font-size: 15px;
+}
+#btn_2>button{
+    border: none;
+    padding: 13px;
+    border-radius: 20px;
+    color: white;
+    background-color: #3d7ad0;
+    width: 150px;
+    font-size: 15px;
+}
+#content>a{
+    text-decoration: none;
+}
+#content>a{
+    color: black;
+}
+
+/*mainsection*/
+.top_main{
+    margin-top: 2%;
+    width: 100%;
+    text-align: center;
+}
+.top_main>h1{
+    font-size: 90px;
+    margin-bottom: 1%;
+}
+.top_main>p{
+    font-size: 35px;
+    color: grey;
+    margin-bottom: 5%;
+}
+
+
+/*footer*/
+
+  #main_footer{
+    /* border: 1px red solid; */
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+#footer{
+    width: 45%;
+    display: flex;
+    
+    /* border: 1px blue solid; */
+}
+#footer>img{
+    width: 20%;
+    height: 40%;
+    /* border: 1px red solid; */
+}
+#footer>h2{
+    /* border: 1px red solid; */
+    font-size: 20px;
+    padding-top: 20px;
+    margin-left: 15px;
+    color: #004AAD;
+}
+#footer>h2>span{
+    color: #EFAB45;
+}
+.footer_subdiv{
+    width: 15%;
+}
+.footer_subdiv>h1{
+    font-size: 20px;
+    color:#004AAD;
+    padding: 7px;
+}
+.footer_subdiv>p{
+    font-size: 15px;
+    color:#8da9d1;
+    padding: 5px;
+}
+.footer_subdiv>p>i{
+    /* border: 1px red solid; */
+    margin-right: 10px;
+    cursor: pointer;
+}
+</style>
+<body>
+    <!----navbar---->
+    <nav>
+        <div id="logo" onclick="goto('logo')">
+            <img src="images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
+        </div>
+        <ul id="content">
+        <li class="nav__link"><a class="nav__link" href="#" onclick="goto('logo')">Home</a></li>
+        <li class="nav__link"><a class="nav__link" href="#">About</a></li>
+        
+        <div class="dropdown">
+            <button  class="dropbtn" >Resource 
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Car rental</a>
+              <a href="#">Bus Rental</a>
+              <a href="#">Travel</a>
+            </div>
+        </div> 
+        <li class="nav__link"><a class="nav__link" href="#">Contact</a></li>
+        
+        <button>Login</button>
+        <div id="btn_2">
+            <button>Get Started</button>
+        </div>   
+    </ul>
+    </nav>
+
+    <div class="main">
+        <div class="top_main">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>elit. Ab, velit!</p>    
+        </div>
+
+        <div class="mid_one">
+            <img src="https://images.unsplash.com/photo-1546274527-9327167dc1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+            <h3>Our Vision</h3>
+            <p>"We will lead our industry by defining service excellence and building unmatched customer loyalty." </p>
+        </div>
+
+        <div class="mid_two">
+            <img src="https://images.unsplash.com/photo-1557825631-19082bca3803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=895&q=80" alt="">
+            <h3>Our Mission </h3>
+            <p>"We will ensure a stress-free car rental experience by providing superior services that cater to our customers' individual needs...always conveying the 'We Try Harder®' spirit with knowledge, caring and a passion for excellence."</p>
+        </div>
+
+        <div class="bottom">
+            <div class="bot_text">
+                <h3>we always focus on comfort</h3>
+                <h1>More About us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi temporibus eius quos nostrum eveniet reprehenderit repellendus dolorum dolore laborum asperiores!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officia ducimus esse incidunt aliquam fuga iste itaque repellendus corporis molestias!</p>
+            </div>
+            <div class="ana">
+                <h3>100000</h3>
+                <p>Miles driven</p>
+            </div>
+            <div class="ana">
+                <h3>1280+</h3>
+                <p>Happy clients</p>
+            </div>
+            <div class="ana">
+                <h3>18</h3>
+                <p>Cities</p>
+            </div>
+            <div class="ana">
+                <h3>90</h3>
+                <p>Vehicles</p>
+            </div>
+        </div>
+
+    </div>
+    <!------------------- footer-part ---------------->
+<footer id="main_footer">
+    <div id="footer" onclick="goto('logo')">
+        <img src="images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
+    </div>
+    <div class="footer_subdiv">
+        <h1>Product</h1>
+        <p>Features</p>
+        <p>Pricing</p>
+        <p>Case Studies</p>
+        <p>Reviews</p>
+        <p>Updates</p>
+    </div>
+    <div class="footer_subdiv">
+        <h1>Company</h1>
+        <p>About</p>
+        <p>Contact us</p>
+        <p>Careers</p>
+        <p>Culture</p>
+        <p>Blogs</p>
+    </div>
+    <div class="footer_subdiv">
+        <h1>Support</h1>
+        <p>Getting started</p>
+        <p>Help</p>
+        <p>Server status</p>
+        <p>Report a bug</p>
+        <p>Chat support</p>
+    </div>
+    <div class="footer_subdiv">
+        <h1>Follow us</h1>
+        <p><i class="fa-brands fa-facebook-f"></i> Facebook</p>
+        <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+        <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
+        <p><i class="fa-brands fa-linkedin-in"></i> Linkdin</p>
+        <p><i class="fa-brands fa-youtube"></i> YouTube</p>
+    </div>
+</footer>
+</body>
+</html>
