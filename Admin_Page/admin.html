@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-</head>
-<body>
-    <h2>Admin Page</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <h1>Admin Page</h1>
+    <div id="container">
+        <div id="dataInject">
+            <h2 id="h1">Add Cars Data</h2>
+            <div id="addCars">
+                <input type="number" name="ratings" id="ratings" placeholder="Ratings">
+                <input type="number" name="trips" id="trips" placeholder="Trips">
+                <input type="text" name="name" id="name" placeholder="Name of Car">
+                <input type="text" name="type" id="type" placeholder="Type">
+                <input type="text" name="emission" id="emission" placeholder="Emission">
+                <input type="number" name="seats" id="seats" placeholder="Seats">
+                <input type="number" name="price" id="price" placeholder="Price">
+                <input type="text" name="image" id="image" placeholder="Image">
+                <input type="text" name="category" id="category" placeholder="Category">
+                <input type="number" name="airbags" id="airbags" placeholder="Airbags">
+                <input type="text" name="sunroof" id="sunroof" placeholder="Sun Roof [true/false]">
+                <input type="text" name="CruiseControl" id="CruiseControl" placeholder="Cruise Control[true/false]">
+                <input type="text" name="Camera" id="Camera" placeholder="Camera [true/false]">
+                <input type="text" name="ac" id="ac" placeholder="AC [true/false]">
+                <input type="submit" id="add">
+            </div>
+        </div>
+        <div id="dataContainer"></div>
+    </div>
+  </body>
 </html>
-<script src="addmin.js"></script>
+<script src="admin.js"></script>
