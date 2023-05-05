@@ -9,11 +9,11 @@
 <style>
     *{
     margin: 0;
-  padding: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #fff;
+    background: #f7f7f7;
 }
 
 /* ---------------Nav-bar--------------- */
@@ -32,6 +32,7 @@ nav{
 }
 nav>div:nth-child(1){
     width: 30%;
+    margin-left: 5%;
     display: flex;
     /* border: 1px red solid; */
 }
@@ -136,21 +137,145 @@ nav>div:nth-child(1)>h2>span{
 }
 
 /*mainsection*/
+/*top*/
 .top_main{
     margin-top: 2%;
     width: 100%;
     text-align: center;
 }
 .top_main>h1{
-    font-size: 90px;
+    font-size: 50px;
     margin-bottom: 1%;
+    color: #004AAD;
 }
 .top_main>p{
-    font-size: 35px;
+    font-size: 25px;
     color: grey;
     margin-bottom: 5%;
 }
 
+/*mid*/
+.mid_one{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    font-size: larger;
+    justify-content: space-between;
+    margin-top: 10%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 3%;
+    margin-bottom: 10%;
+}
+
+.mid_one>img{
+    height: 400px;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+.mid_one>div>h1{
+   margin-top: 5%;  
+   margin-bottom: 5%;
+   color: #004AAD;
+   margin-left: 10%;
+}
+
+.mid_one>div>p{
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: justify;
+    color: grey;
+}
+
+/*mid_two*/
+.mid_two{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    font-size: larger;
+    justify-content: space-between;
+    margin-top: 10%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 3%;
+    margin-bottom: 10%;
+}
+.mid_two>img{
+    height: 400px;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+}
+.mid_two>div>h1{
+   margin-top: 5%;  
+   margin-bottom: 5%;
+   color: #004AAD;
+   margin-left: 10%;
+}
+
+.mid_two>div>p{
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: justify;
+    color: grey;
+}
+
+/*bottom*/
+.bottom{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    background-image: URL("https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  
+  
+}
+
+.bottom>.bot_ana{
+ width: 50%;
+ margin: auto;
+ margin-right: 10%;
+ display: grid;
+ grid-template-columns: repeat(2,2fr);
+ text-align: center;
+}
+.bot_text{
+    width: 50%;
+    margin:auto;
+    text-align: justify;
+    margin-bottom: 20%;
+    margin-left: 5%;
+ 
+}
+.bot_text>h3{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: larger;
+    color: orange
+}
+.bot_text>h1{
+    margin-bottom: 5%;
+    font-size: 50px;
+    color: #004AAD;
+}
+.bot_text>p{
+    color: black;
+    font-size: large;
+}
+
+.ana{
+    margin-left: 50%;
+    margin-bottom: 20%;
+    padding: 15% 0% 15% 0%;
+    background-color: orange;
+    color: #004AAD;
+    border-radius: 3%;
+}
+.ana>h3{
+    margin-bottom: 5%;
+}
 
 /*footer*/
 
@@ -169,7 +294,7 @@ nav>div:nth-child(1)>h2>span{
 }
 #footer>img{
     width: 20%;
-    height: 40%;
+    height: 50%;
     /* border: 1px red solid; */
 }
 #footer>h2{
@@ -205,7 +330,7 @@ nav>div:nth-child(1)>h2>span{
     <!----navbar---->
     <nav>
         <div id="logo" onclick="goto('logo')">
-            <img src="images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
+            <img src="..//images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
         </div>
         <ul id="content">
         <li class="nav__link"><a class="nav__link" href="#" onclick="goto('logo')">Home</a></li>
@@ -237,15 +362,19 @@ nav>div:nth-child(1)>h2>span{
         </div>
 
         <div class="mid_one">
+           <div>
+            <h1>Our Vision</h1>
+            <p>"Our goal is to provide exceptional service to our customers, and we will prioritize their needs at every touchpoint. We will empower our employees to innovate and continuously improve our customer experience. We will measure our success through customer satisfaction, retention, and referrals, using technology and data to gain insights into our customers' preferences. Our ultimate aim is to be the most trusted provider of transportation services in our industry." </p>
+        </div>
             <img src="https://images.unsplash.com/photo-1546274527-9327167dc1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
-            <h3>Our Vision</h3>
-            <p>"We will lead our industry by defining service excellence and building unmatched customer loyalty." </p>
         </div>
 
         <div class="mid_two">
             <img src="https://images.unsplash.com/photo-1557825631-19082bca3803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=895&q=80" alt="">
-            <h3>Our Mission </h3>
-            <p>"We will ensure a stress-free car rental experience by providing superior services that cater to our customers' individual needs...always conveying the 'We Try Harder®' spirit with knowledge, caring and a passion for excellence."</p>
+            <div>
+            <h1>Our Mission </h1>
+            <p>"We will provide stress-free car rental by offering personalized, transparent, and competitive services that exceed our customers' expectations. Our commitment to service excellence will be supported by the "We Try Harder®" spirit, which will empower our employees to continuously innovate and improve.We will strive to create a memorable and enjoyable experience for our customers, where they feel valued, appreciated, and eager to return."</p>
+        </div>
         </div>
 
         <div class="bottom">
@@ -255,6 +384,9 @@ nav>div:nth-child(1)>h2>span{
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi temporibus eius quos nostrum eveniet reprehenderit repellendus dolorum dolore laborum asperiores!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officia ducimus esse incidunt aliquam fuga iste itaque repellendus corporis molestias!</p>
             </div>
+
+
+            <div class="bot_ana">
             <div class="ana">
                 <h3>100000</h3>
                 <p>Miles driven</p>
@@ -272,12 +404,13 @@ nav>div:nth-child(1)>h2>span{
                 <p>Vehicles</p>
             </div>
         </div>
+        </div>
 
     </div>
     <!------------------- footer-part ---------------->
 <footer id="main_footer">
     <div id="footer" onclick="goto('logo')">
-        <img src="images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
+        <img src="..//images\logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
     </div>
     <div class="footer_subdiv">
         <h1>Product</h1>
@@ -313,4 +446,43 @@ nav>div:nth-child(1)>h2>span{
     </div>
 </footer>
 </body>
+<script>
+    function goto(page){
+    page.preventDefault()
+    if(page =="logo"){
+        window.location.href = '/index.html'
+    }
+}
+
+function expandOptions(e){
+    e.querySelector('div').style.display = 'flex'
+   }   
+   function closeOptions(e){
+    e.querySelector('div').style.display = 'none'
+}
+
+// -------------------navbar-name----------------------//
+document.addEventListener('DOMContentLoaded', function() {
+    const selector = '.nav__link';
+    const elems = Array.from( document.querySelectorAll( selector ) );
+    const navigation = document.getElementById('content');
+    
+    function makeActive( evt ) {
+      const target = evt.target;
+      
+      if ( !target || !target.matches( selector ) ) {
+        return;
+      }
+      
+      elems.forEach( elem => elem.classList.remove( 'active' ) );
+        
+        evt.target.classList.add( 'active' );
+    };
+    
+    
+    navigation.addEventListener( 'click', makeActive );
+    
+    
+    } );
+</script>
 </html>
