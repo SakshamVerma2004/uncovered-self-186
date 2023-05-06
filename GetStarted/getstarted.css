@@ -1,0 +1,115 @@
+body{
+    background-color: #7866fe;
+}
+#container{
+    width: 90%;
+    height: 500px;
+    border: 0px solid darkblue;
+    margin-left: 5%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#first{
+    width: 25%;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    text-align: center;
+}
+#first > img{
+    width: 80%;
+    margin-left: 10%;
+}
+#first > p{
+    margin-top: -20px;
+    width: 90%;
+    margin-left: 5%;
+}
+#enterDetailsbtn{
+    width: 60%;
+    height: 40px;
+    margin-left: 20%;
+    margin-top: -20px;
+    background-color: #7965fe;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+}
+#second{
+    width: 25%;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    text-align: center;
+}
+#second > img{
+    width: 80%;
+    margin-left: 10%;
+}
+#second > p{
+    margin-top: -20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#third{
+    width: 25%;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    text-align: center;
+}
+#third > img{
+    width: 80%;
+    margin-left: 10%;
+}
+#third > p{
+    margin-top: -20px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#myForm {
+    color: black;
+    width: 50%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1;
+    border: 3px solid black;
+    border-radius: 15px;
+    color: rgb(23, 21, 21);
+  }
+  #myForm > form >input{
+    width: 60%;
+    margin-left: 20%;
+    font-size: 25px;
+  }
+  #myForm > form >label{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+  }
+  #detailsSubmitBtn{
+    width: 50%;
+    font-size: 30px;
+    margin-left: 25%;
+    margin-top: 15px;
+    background-color: gold;
+    border-radius: 10px;
+    border:2px solid black;
+  }
+
+  #myForm h2{
+    color: black;
+    text-align: center;
+  }

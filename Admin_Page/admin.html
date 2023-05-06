@@ -8,11 +8,16 @@
     <title>Admin Page</title>
   </head>
   <body>
-    <h1>Admin Page</h1>
+    <div id="navbar">
+        <button id="carsData">CARS</button>
+        <button id="busData">BUS</button>
+        <h1 id="pageTitle">Admin Page</h1>
+    </div>
+    
     <div id="container">
         <div id="dataInject">
-            <h2 id="h1">Add Cars Data</h2>
             <div id="addCars">
+                <h2 id="h1">Add New Cars Data</h2>
                 <input type="number" name="ratings" id="ratings" placeholder="Ratings">
                 <input type="number" name="trips" id="trips" placeholder="Trips">
                 <input type="text" name="name" id="name" placeholder="Name of Car">
@@ -27,7 +32,27 @@
                 <input type="text" name="CruiseControl" id="CruiseControl" placeholder="Cruise Control[true/false]">
                 <input type="text" name="Camera" id="Camera" placeholder="Camera [true/false]">
                 <input type="text" name="ac" id="ac" placeholder="AC [true/false]">
-                <input type="submit" id="add">
+                <input type="submit" id="addCarsBtn">
+            </div>
+            <!-- ------------------ -->
+            <br>
+            <div id="addBus">
+                <h2 id="h1">Add New Cars Data</h2>
+                <input type="number" name="ratings" id="ratings" placeholder="Ratings">
+                <input type="number" name="trips" id="trips" placeholder="Trips">
+                <input type="text" name="name" id="name" placeholder="Name of Car">
+                <input type="text" name="type" id="type" placeholder="Type">
+                <input type="text" name="emission" id="emission" placeholder="Emission">
+                <input type="number" name="seats" id="seats" placeholder="Seats">
+                <input type="number" name="price" id="price" placeholder="Price">
+                <input type="text" name="image" id="image" placeholder="Image">
+                <input type="text" name="category" id="category" placeholder="Category">
+                <input type="number" name="airbags" id="airbags" placeholder="Airbags">
+                <input type="text" name="sunroof" id="sunroof" placeholder="Sun Roof [true/false]">
+                <input type="text" name="CruiseControl" id="CruiseControl" placeholder="Cruise Control[true/false]">
+                <input type="text" name="Camera" id="Camera" placeholder="Camera [true/false]">
+                <input type="text" name="ac" id="ac" placeholder="AC [true/false]">
+                <input type="submit" id="addBusBtn">
             </div>
         </div>
         <div id="dataContainer"></div>
