@@ -298,30 +298,38 @@ html {
     margin-right: 10px;
     cursor: pointer;
 }
+#home img{
+    height:90px;
+}
+#log{
+    text-decoration: none;
+    color:blue;
+}
 </style>
 <body>
     <!----navbar---->
     <nav>
         <div id="logo" onclick="goto('logo')">
-            <img src="...//images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
+            <a id="home" href="..//index.html"><img src="..//Signup_Page/travel-website-logo2.jpg" alt=""></a>
+            <h2>MWENDO <span>INDIA</span></h2>
         </div>
         <ul id="content">
-        <li class="nav__link"><a class="nav__link" href="#" onclick="goto('logo')">Home</a></li>
-        <li class="nav__link"><a class="nav__link" href="#">About</a></li>
+        <li class="nav__link"><a class="nav__link" href="..//index.html" onclick="goto('logo')">Home</a></li>
+        <li class="nav__link"><a class="nav__link" href="./About.html">About</a></li>
         
         <div class="dropdown">
             <button  class="dropbtn" >Resource 
                 <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="#">Car rental</a>
-              <a href="#">Bus Rental</a>
-              <a href="#">Travel</a>
+              <a href="..//Cars_Page/Cars.html">Car rental</a>
+              <a href="..//Bus_Page/Bus.html">Bus Rental</a>
+              <a href="..//Bus_Page/Bus.html">Travel</a>
             </div>
         </div> 
-        <li class="nav__link"><a class="nav__link" href="#">Contact</a></li>
+        <li class="nav__link"><a class="nav__link" href="./contact.html">Contact</a></li>
         
-        <button>Login</button>
+        <button><a id="log" href="..//Login-Page/Login.html">Login</a></button>
         <div id="btn_2">
             <button>Get Started</button>
         </div>   
