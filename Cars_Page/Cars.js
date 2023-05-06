@@ -1,10 +1,18 @@
 let data=JSON.parse(localStorage.getItem("bookdata"))||[];
-
 let main=document.getElementById("main");
-fetchdata();
-function fetchdata(){
-    fetch("https://carsapi-mauve.vercel.app/data")
+let pagination=document.getElementById("pagination");
+fetchdata(1);
+function fetchdata(Page){
+    fetch(`https://carsapi-mauve.vercel.app/data?_page=${Page}&_limit=8`)
     .then(function(res){
+        let total=res.headers.get("X-Total-count");
+        console.log(total);
+        let page=Math.ceil(total/8);
+        console.log(page);
+        pagination.innerHTML="";
+        for(let i=1;i<=page;i++){
+            pagination.append(createbutton(i));
+        }
         return res.json();
     })
     .then(function(data){
@@ -13,6 +21,17 @@ function fetchdata(){
     })
 }
 
+
+function createbutton(id){
+    let btn=document.createElement("button");
+    btn.className="page-button";
+    btn.setAttribute("data-page-number",id);
+    btn.textContent=id;
+    btn.addEventListener("click",function(){
+        fetchdata(id);
+    })
+    return btn;
+}
 
 function appenddata(data){
     main.innerHTML="";
@@ -93,7 +112,7 @@ function createcard(item){
         localStorage.setItem("bookdata",JSON.stringify(data));
         console.log(data);
         alert("Car Added to Booking Page");
-        window.location.href="#";
+        window.location.href="..//Indiviual_Car_Page/Indiviual_Car.html";
     });
 
     price.append(money,booknow);

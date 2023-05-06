@@ -6,7 +6,13 @@
 body{
     background: #fff;
 }
-
+#home img{
+    height:80px;
+}
+#log{
+    text-decoration: none;
+    color:blue;
+}
 /* ---------------Nav-bar--------------- */
 nav{
     display: flex;
