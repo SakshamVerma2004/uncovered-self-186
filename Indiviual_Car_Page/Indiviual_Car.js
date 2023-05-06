@@ -48,7 +48,11 @@ btn.addEventListener("click",function(){
     }
     else{
         alert(`You Have Successfully booked a vehicle with a name ${data[n].name} . You will recieve the respective notifications as well.`);
+        setTimeout(function(){
+            window.location.href = '/index.html'
+           },3000)
     }
+    
 });
 
 days.addEventListener("input",function(){
