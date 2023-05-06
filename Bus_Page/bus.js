@@ -1,51 +1,241 @@
-let mainSection=document.getElementById("bus_data")
+let BusURl="https://bus-api-henna.vercel.app/busData"
 
-
-let busURL="https://bus-api-henna.vercel.app/busData"
-
-
-function fetchBusData(){
-    fetch(busURL)
-    .then(res=>{return res.json()})
-    .then((data)=>{appendBusData(data)})
-    .catch((err)=>{console.log(err)})
+let data=JSON.parse(localStorage.getItem("bookdata"))||[];
+let main=document.getElementById("main");
+let pagination=document.getElementById("pagination");
+fetchdata(1);
+function fetchdata(Page){
+    fetch(`https://bus-api-henna.vercel.app/busData?_page=${Page}&_limit=8`)
+    .then(function(res){
+        let total=res.headers.get("X-Total-count");
+        console.log(total);
+        let page=Math.ceil(total/8);
+        console.log(page);
+        pagination.innerHTML="";
+        for(let i=1;i<=page;i++){
+            pagination.append(createbutton(i));
+        }
+        return res.json();
+    })
+    .then(function(data){
+        console.log(data);
+        appenddata(data);
+    })
 }
 
-function appendBusData(data){
-    mainSection.innerHTML=""
-    let card_list=document.createElement("div")
-    card_list.className="card-list"
-    mainSection.append(card_list)
 
-    data.forEach(item => {
-        card_list.append(createBusCard(item))
+function createbutton(id){
+    let btn=document.createElement("button");
+    btn.className="page-button";
+    btn.setAttribute("data-page-number",id);
+    btn.textContent=id;
+    btn.addEventListener("click",function(){
+        fetchdata(id);
+    })
+    return btn;
+}
+
+function appenddata(data){
+    main.innerHTML="";
+    let cardlist=document.createElement("div");
+    cardlist.className="card-list";
+    main.append(cardlist);
+
+    data.forEach(function(item){
+        cardlist.append(createcard(item));
+    })
+}
+
+
+function createcard(item){
+    let card=document.createElement("div");
+    card.className="card";
+    card.setAttribute("data-id",item.id);
+
+    let cardimg=document.createElement("div");
+    cardimg.className="card-img";
+
+    let img=document.createElement("img");
+    img.className="bus-image";
+    img.src=item.image;
+    img.setAttribute("alt","bus");
+
+    cardimg.append(img);
+
+    let cardbody=document.createElement("div");
+    cardbody.className="card-body";
+
+    let ratingimg=document.createElement("img");
+    ratingimg.src="https://th.bing.com/th/id/OIP.ZlCJ0TGNGLIMu8XwbrAzRwHaHa?w=190&h=190&c=7&r=0&o=5&dpr=1.3&pid=1.7";
+    ratingimg.className="logo-img";
+
+    let rating=document.createElement("p");
+    rating.className="rating";
+    rating.textContent=`Ratings - ${item.ratings} `;
+
+    let trips=document.createElement("p");
+    trips.className="trips";
+    trips.textContent=` (${item.trips} Trips)`;
+
+    cardbody.append(ratingimg,rating,trips);
+
+    let busname=document.createElement("div");
+    busname.className="bus-name";
+
+    let bus=document.createElement("h3");
+    bus.textContent=item.name;
+
+    let extra=document.createElement("p");
+    extra.textContent=`${item.category} - ${item.emission} - ${item.seats} seats`;
+
+    busname.append(bus,extra);
+
+    let price=document.createElement("div");
+    price.className="price";
+
+    let money=document.createElement("h2");
+    money.textContent=`Rs.${item.price}/day`;
+    money.className="money";
+
+    let booknow=document.createElement("button");
+    booknow.className="book";
+    booknow.textContent="Book Now";
+
+    booknow.addEventListener("click",function(){
+        let obj={
+            name:item.name,
+            price:item.price,
+            image:item.image,
+            trips:item.trips,
+            seats:item.seats,
+            emission:item.emission,
+        }
+        data.push(obj);
+        localStorage.setItem("bookdata",JSON.stringify(data));
+        console.log(data);
+        alert("Bus Added to Booking Page");
+        window.location.href="..//Indiviual_Car_Page/Indiviual_Car.html";
     });
+
+    price.append(money,booknow);
+
+    card.append(cardimg,cardbody,busname,price);
+    return card;
 }
 
-function createBusCard(item){
-    let card=document.createElement("div")
-    card.className="card"
+let sort1=document.getElementById("lth");
+sort1.addEventListener("click",sortlth);
+function sortlth(e){
+    e.preventDefault();
+    fetch(`${BusURl}?_sort=price&_order=desc`)
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(data){
+        console.log(data);
+        appenddata(data);
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+}
 
-    let imgDiv=document.createElement("div")
-    imgDiv.className="bus-image"
-    let img=document.createElement("img")
-    img.src=item.image
-    img.setAttribute("alt","img")
+let sort2=document.getElementById("htl");
+sort2.addEventListener("click",sorthtl);
+function sorthtl(e){
+    e.preventDefault();
+    fetch(`${BusURl}?_sort=price&_order=asc`)
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(data){
+        console.log(data);
+        appenddata(data);
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+}
 
-    imgDiv.append(img)
+let minibus=document.getElementById("minibus");
+minibus.addEventListener("click",fminibus);
+function fminibus(e){
+    e.preventDefault();
+    fetch(`${BusURl}?category=minibus`)
+    .then(function(res){
+      return res.json();
+    })
+    .then(function(data){
+      console.log(data);
+      appenddata(data);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+}
 
-    let cardBody=document.createElement("div")
-    cardBody.className="card-Body"
+let coach=document.getElementById("coach");
+coach.addEventListener("click",fcoach);
+function fcoach(e){
+    e.preventDefault();
+    fetch(`${BusURl}?category=coach`)
+    .then(function(res){
+      return res.json();
+    })
+    .then(function(data){
+      console.log(data);
+      appenddata(data);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+}
 
-    let cardRate=document.createElement("p")
-    cardRate.className="card-rate"
-    cardRate.textContent=`${item.ratings}${`(${item.trips} Trips)`}`
+let minivan=document.getElementById("minivan");
+minivan.addEventListener("click",fminivan);
+function fminivan(e){
+    e.preventDefault();
+    fetch(`${BusURl}?category=minivan`)
+    .then(function(res){
+      return res.json();
+    })
+    .then(function(data){
+      console.log(data);
+      appenddata(data);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+}
 
-    let title=document.createElement("h3")
-    title.className="card-title"
-    title.textContent=item.name
 
-    let Busdetails=document.createElement("p")
-    Busdetails.className="detail-bus"
-    Busdetails.textContent=``
+
+let all=document.getElementById("all");
+all.addEventListener("click",fetchdata);
+let All =document.getElementById("All");
+All.addEventListener("click",fetchdata);
+
+let searchBtn = document.getElementById("search-btn");
+searchBtn.addEventListener("click", searchBus);
+
+function searchBus(e) {
+    e.preventDefault();
+    let input = document.getElementById("search").value.toUpperCase();
+    let filteredBus = [];
+    fetch(BusURl)
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        for (let i = 0; i < data.length; i++) {
+            let busName = data[i].name.toUpperCase();
+            if (busName.includes(input)) {
+                filteredBus.push(data[i]);
+            }
+        }
+        appenddata(filteredBus);
+    })
+    .catch(function(error) {
+        console.log(error);
+    })
 }
