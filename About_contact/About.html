@@ -9,13 +9,19 @@
 <style>
     *{
     margin: 0;
-    padding: 0;
+  padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #f7f7f7;
+    background: #fff;
 }
-
+#home img{
+    height:80px;
+}
+#log{
+    text-decoration: none;
+    color:blue;
+}
 /* ---------------Nav-bar--------------- */
 nav{
     display: flex;
@@ -32,7 +38,6 @@ nav{
 }
 nav>div:nth-child(1){
     width: 30%;
-    margin-left: 5%;
     display: flex;
     /* border: 1px red solid; */
 }
@@ -63,7 +68,17 @@ nav>div:nth-child(1)>h2>span{
     /* border: 1px red solid; */
       color: #005cd5;
 }
-
+/* -----------slider-starts---------------- */
+/* .Resource_subcontent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: -1;
+}
+.Resource_subcontent>a{
+    text-decoration: none;
+    color: black;
+} */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -102,7 +117,7 @@ nav>div:nth-child(1)>h2>span{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
+/* -----------slider-ends---------------- */
 #content{
     /* border: 1px red solid; */
     display: flex;
@@ -277,9 +292,8 @@ nav>div:nth-child(1)>h2>span{
     margin-bottom: 5%;
 }
 
-/*footer*/
-
-  #main_footer{
+/* ----------------footer-------------- */
+#main_footer{
     /* border: 1px red solid; */
     width: 90%;
     margin: auto;
@@ -294,7 +308,7 @@ nav>div:nth-child(1)>h2>span{
 }
 #footer>img{
     width: 20%;
-    height: 50%;
+    height: 45%;
     /* border: 1px red solid; */
 }
 #footer>h2{
@@ -319,50 +333,119 @@ nav>div:nth-child(1)>h2>span{
     font-size: 15px;
     color:#8da9d1;
     padding: 5px;
+    cursor: pointer;
 }
 .footer_subdiv>p>i{
     /* border: 1px red solid; */
     margin-right: 10px;
     cursor: pointer;
 }
-#home img{
-    height:90px;
+/* -------------------------resposiveness---------------------- */
+@media screen and (max-width: 600px){
+    nav{
+        display: flex;
+        width: 220%;
+        padding: 5px 20px;
+        height: 80px;
+        
+       justify-content: space-between;
+        z-index: 2;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        left: 0;
+        
+    }
+    nav>div:nth-child(1){
+        width: 30%;
+        display: flex;
+        
+    }
+    nav>div:nth-child(1)>img{
+        width: 20%;
+        
+        
+    }
+    nav>div:nth-child(1)>h2{
+        
+        font-size: 20px;
+        padding-top: 25px;
+        margin-left: 15px;
+        color: #004AAD;
+    }
+    nav>div:nth-child(1)>h2>span{
+        color: #EFAB45;
+    }
+    #content>li{
+    display: none;
 }
-#log{
-    text-decoration: none;
-    color:blue;
+#content>button{
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 20px;
+    color: #004AAD;
+    background-color: white;
+    width: 80px;
+    font-size: 15px;
+}
+ .dropdown .dropbtn {
+    font-size: 15px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    /* border: 1px red solid; */
+    width: 150px;
+  }
+
+  /* ----------------footer-------------- */
+#main_footer{
+    /* border: 1px red solid; */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    width: 200%;
+    margin-left: 10%;
+}
+
 }
 </style>
 <body>
-    <!----navbar---->
+    <!------------------ nav-bar ----------------------->
     <nav>
         <div id="logo" onclick="goto('logo')">
-            <a id="home" href="..//index.html"><img src="..//Signup_Page/travel-website-logo2.jpg" alt=""></a>
-            <h2>MWENDO <span>INDIA</span></h2>
+            <a id="home" href="..//index.html"><img src="..//Signup_Page/travel-website-logo2.jpg" alt=""></a><h2>MWENDO <span>INDIA</span></h2>
         </div>
         <ul id="content">
-        <li class="nav__link"><a class="nav__link" href="..//index.html" onclick="goto('logo')">Home</a></li>
-        <li class="nav__link"><a class="nav__link" href="..//About_contact/About.html">About</a></li>
+        <li class="nav__link"><a class="nav__link" href="./index.html" onclick="goto('logo')">Home</a></li>
+        <li class="nav__link"><a class="nav__link" href="./About_contact/About.html">About</a></li>
         
+
+       
         <div class="dropdown">
             <button  class="dropbtn" >Resource 
                 <i class="fa-solid fa-chevron-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="..//Cars_Page/Cars.html">Car rental</a>
-              <a href="..//Bus_Page/Bus.html">Bus Rental</a>
-              <a href="..//Bus_Page/Bus.html">Travel</a>
+              <a href="./Cars_Page/Cars.html">Car rental</a>
+              <a href="./Bus_Page/Bus.html">Bus Rental</a>
+              <a href="./Bus_Page/Bus.html">Travel</a>
             </div>
         </div> 
-        <li class="nav__link"><a class="nav__link" href="./contact.html">Contact</a></li>
+        <li class="nav__link"><a class="nav__link" href="./About_contact/contact.html">Contact</a></li>
         
-        <button><a id="log" href="..//Login-Page/Login.html">Login</a></button>
+        <button><a id="log" href="./Login-Page/Login.html">Login</a></button>
         <div id="btn_2">
             <button>Get Started</button>
-        </div>   
+        </div>
+        
     </ul>
     </nav>
-
+  <!--mainsextion-->
     <div class="main">
         <div class="top_main">
             <h1>About Us</h1>
@@ -415,10 +498,10 @@ nav>div:nth-child(1)>h2>span{
         </div>
 
     </div>
-    <!------------------- footer-part ---------------->
+   <!------------------- footer-part ---------------->
 <footer id="main_footer">
     <div id="footer" onclick="goto('logo')">
-        <img src="..//images\logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
+        <img src="..//images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
     </div>
     <div class="footer_subdiv">
         <h1>Product</h1>
