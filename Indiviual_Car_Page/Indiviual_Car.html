@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//Indiviual_Car_Page/Indiviual_Car.css">
+    <title>Indiviual Car</title>
+</head>
+<body>
+        <!------------------ nav-bar ----------------------->
+        <nav>
+            <div id="logo" onclick="goto('logo')">
+                <a id="home" href="..//index.html"><img src="..//Signup_Page/travel-website-logo2.jpg" alt=""></a><h2>MWENDO <span>INDIA</span></h2>
+            </div>
+            <ul id="content">
+            <li class="nav__link"><a class="nav__link" href="..//index.html" onclick="goto('logo')">Home</a></li>
+            <li class="nav__link"><a class="nav__link" href="..//About_contact/About.html">About</a></li>
+            
+    
+            <!-- <div onmouseover="expandOptions(this)" onmouseout="closeOptions(this)">Resource <i class="fa-solid fa-chevron-down"></i>
+                <div class="Resource_subcontent">
+                    <a href="#">Car rental</a>
+                    <a href="#">Bus rental</a>
+                    <a href="#">Travel</a>
+                </div>
+            </div> -->
+            <div class="dropdown">
+                <button  class="dropbtn" >Resource 
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="..//Cars_Page/Cars.html">Car rental</a>
+                  <a href="..//Bus_Page/Bus.html">Bus Rental</a>
+                  <a href="..//Bus_Page/Bus.html">Travel</a>
+                </div>
+            </div> 
+            <li class="nav__link"><a class="nav__link" href="..//About_contact/contact.html">Contact</a></li>
+            
+            <button><a id="log" href="..//Signup_Page/Signup.html">Login</a></button>
+            <div id="btn_2">
+                <button>Get Started</button>
+            </div>
+            
+        </ul>
+        </nav>
+        <div id="parent">
+            <div id="photo"></div>
+            <div id="main">
+                <h1 id="main-head">Your Info</h1>
+                <div id="name">
+                    <h3 id="nametext">Your Name</h3>
+                    <input type="text" placeholder="Name.." id="nameinp">
+                </div>
+                <div id="email">
+                    <h3 id="emailtext">Your Email</h3>
+                    <input type="email" placeholder="Email.." id="emailinp">
+                </div>
+                <div id="mobile">
+                    <h3 id="mobiletext">Your Mobile Number</h3>
+                    <input type="number" placeholder="Mobile Number.." id="mobileinp">
+                </div>
+                <div is="daydiv">
+                <h3 id="daystext">For how many days , the vehicle is needed</h3>
+                <input type="number" name="number" id="days" placeholder="Days..">
+                </div>
+                <div id="datediv">
+                    <h3 id="datetext">Please Confirm the date from which you want to rent the vehicle</h3>
+                    <input type="date" id="start">
+                </div>
+                <div id="closediv">
+                    <h3 id="closetext">Please Confirm the date till when you needed the vehicle</h3>
+                    <input type="date" id="end">
+                </div>
+                <div id="acc">
+                    <h3 id="acctext">Your Account Number</h3>
+                    <input type="number" id="accinp" placeholder="Account Number..">
+                </div>
+                <div id="cvv">
+                    <h3 id="cvvtext">Your CVV</h3>
+                    <input type="number" placeholder="CVV.." id="cvvinp">
+                </div>
+                <div id="total">
+                    <h3>Your Total Amount is </h3>
+                    <input type="number" placeholder="Ruppees.." id="sum">
+                </div>
+                <h2 id="hidden"></h2>
+                <button id="btn">CONFIRM</button>
+                <p id="para">By Clicking on "CONFIRM" button , the Privacy and Policy of Mwendo India will be applied to you and you are confirming your rental vehicle.</p>
+            </div>
+        </div>
+</body>
+</html>
+<script src="..//Indiviual_Car_Page/Indiviual_Car.js"></script>

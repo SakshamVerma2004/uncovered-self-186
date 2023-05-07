@@ -1,18 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Bus.css">
+    <title>Bus</title>
 </head>
-<body>
-    <nav>navbar</nav>
-    <div class="bus_data" id="bus_data">
-        
-    </div>
 
+<body>
+    <nav>
+        <div id="logo" onclick="goto('logo')">
+            <a id="home" href="..//index.html"><img src="..//Signup_Page/travel-website-logo2.jpg" alt=""></a>
+            <h2>MWENDO <span>INDIA</span></h2>
+        </div>
+        <ul id="content">
+            <li class="nav__link"><a class="nav__link" href="..//index.html" onclick="goto('logo')">Home</a></li>
+            <li class="nav__link"><a class="nav__link" href="..//About_contact/About.html">About</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Resource
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="..//Cars_Page/Cars.html">Car rental</a>
+                    <a href="..//Bus_Page/Bus.html">Bus Rental</a>
+                    <a href="..//Bus_Page/Bus.html">Travel</a>
+                </div>
+            </div>
+            <li class="nav__link"><a class="nav__link" href="..//About_contact/contact.html">Contact</a></li>
+
+            <button><a id="log" href="..//Login-Page/Login.html">Login</a></button>
+            <div id="btn_2">
+                <button>Get Started</button>
+            </div>
+        </ul>
+    </nav>
+
+    <!-- Cars section -->
+    <div id="parent">
+        <div id="features">
+            <div id="first">
+                <input type="search" placeholder="Search here.." id="search">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="second">
+                <h1 id="filter">Filter By Category:</h1>
+                <div>
+                    <div>
+                        <button id="all">All</button>
+                    </div>
+                    <button id="minibus">Minibus</button>
+                </div>
+                <div>
+                    <button id="coach">coach</button>
+                </div>
+                <div>
+                    <button id="minivan">MiniVan</button>
+                </div>
+                
+            </div>
+            <div id="third">
+                <h1 id="sort">Sort By Price:</h1>
+                <div>
+                    <button id="All">All</button>
+                </div>
+                <div>
+                    <button id="htl">High To Low</button>
+                </div>
+                <div>
+                    <button id="lth">Low To High</button>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+        </div>
     </div>
+    <!-- pagination -->
+    <div id="pagination"></div>
 </body>
-<script src="bus.js"></script>
+
 </html>
+<script src="./bus.js"></script>

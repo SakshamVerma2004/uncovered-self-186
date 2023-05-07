@@ -200,7 +200,7 @@ nav>div:nth-child(1)>h2>span{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px;
 }
-.car-image{
+.bus-image{
     width:100%;
     border-radius: 5px;
     height:180px;
@@ -241,7 +241,7 @@ nav>div:nth-child(1)>h2>span{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
-.car-name{
+.bus-name{
     font-family: Arial, Helvetica, sans-serif;
 }
 #search{
@@ -275,7 +275,7 @@ nav>div:nth-child(1)>h2>span{
 #third button{
     margin-bottom: 5px;
 }
-#sedan{
+#minibus{
     background-color: pink;
     border: none;
     padding: 5px;
@@ -283,7 +283,7 @@ nav>div:nth-child(1)>h2>span{
     border-radius: 4px;
     margin-top: 5px;
 }
-#suv{
+#coach{
     background-color: pink;
     border: none;
     padding: 5px;
@@ -291,7 +291,7 @@ nav>div:nth-child(1)>h2>span{
     border-radius: 4px;
     margin-top: 5px;
 }
-#luxury{
+#minivan{
     background-color: pink;
     border: none;
     padding: 5px;
@@ -299,34 +299,24 @@ nav>div:nth-child(1)>h2>span{
     border-radius: 4px;
     margin-top: 5px;
 }
-#hatchback{
-    background-color: pink;
-    border: none;
-    padding: 5px;
-    font-size: 15px;
-    border-radius: 4px;
-    margin-top: 5px;
-}
+
 #search-btn:hover{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#sedan:hover{
+#minibus:hover{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#suv:hover{
+#coach:hover{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#luxury:hover{
+#minivan:hover{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#hatchback:hover{
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+
 #filter{
     text-decoration: underline;
     margin-top: 10px;
@@ -343,6 +333,7 @@ nav>div:nth-child(1)>h2>span{
     border-radius: 4px;
     color: white;
     margin-top: 5px;
+    
 }
 #lth{
     background-color: lightseagreen;
@@ -387,6 +378,8 @@ nav>div:nth-child(1)>h2>span{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
 
 @media only screen and (max-width:800px){
     .card-list{
