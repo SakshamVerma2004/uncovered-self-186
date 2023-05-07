@@ -19,6 +19,7 @@ detailsSubmitBtn.addEventListener("click",function(){
         name:document.getElementById("name").value,
         email:document.getElementById("email").value,
         mobile:document.getElementById("mobile").value,
+        days:document.getElementById("days").value,
         fromdate:document.getElementById("fromdate").value,
         from:document.getElementById("from").value,
         Destination:document.getElementById("Destination").value,

@@ -1,21 +1,26 @@
 #navbar{
     display: flex;
-    
     align-items: center;
 }
 #carsData{
     width: 10%;
-    height: 30px;
+    height: 35px;
     margin-left: 20px;
+    background-color: #005cd5;
+    border-radius: 6px;
+    border: 3px solid gold;
 }
 #busData{
     width: 10%;
-    height: 30px;
+    height: 35px;
     margin-left: 20px;
+    background-color: cornflowerblue;
+    border-radius: 6px;
+    border: 3px solid gold;
 }
 #pageTitle{
     width: 20%;
-    border: 1px solid red;
+    border: 0px solid red;
     margin-left: 20%;
 }
 h1{
@@ -25,11 +30,11 @@ h1{
     padding: 10px;
 }
 #container{
-    border: 1px solid red;
+    border: 0px solid red;
     display: flex;
 }
 #dataInject{
-    border: 1px solid blue;
+    border: 0px solid blue;
     width: 24%;
 }
 #dataContainer{
@@ -47,7 +52,23 @@ h1{
     margin-top: -1px;
     height: 22px;
 }
+#EditCars{
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    border: 3px solid red;
+}
+#EditCars > input{
+    margin-top: -1px;
+    height: 22px;
+}
 #addBus{
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    border: 3px solid rgb(0, 8, 255);
+}
+#EditBus{
     display: grid;
     gap: 10px;
     padding: 10px;
@@ -299,4 +320,152 @@ h1{
     .book{
         display: none;
     }
+}
+
+/* ........... */
+#parent{
+    width:100%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+#features{
+    width:20%;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    top:0;
+    padding: 10px;
+    margin-top: 100px;
+}
+#main{
+    width:80%;
+    margin-left: 335px;
+}
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px
+}
+.card{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+}
+.bus-image{
+    width:100%;
+    border-radius: 5px;
+    height:180px;
+}
+.logo-img{
+    height:20px;
+    margin-right: 5px;
+}
+.card-body{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.trips{
+    margin-left: 5px;
+}
+.money{
+    text-decoration: underline;
+    margin-top: 10px;
+    color: red;
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+.book{
+    margin-left: 40px;
+    padding: 5px;
+    margin-top: 10px;
+    height:25px;
+    color: white;
+    background-color: #005cd5;
+    border: none;
+    border-radius: 5px;
+}
+.book:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.bus-name{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#search{
+    font-size: 15px;
+    padding: 5px;
+    background-color: #f6eded;
+    border: none;
+    border-radius: 4px;
+}
+#search-btn{
+    color:black;
+    background-color: rgb(154, 154, 232);
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+#first{
+    align-items: center;
+    margin-left: 10px;
+}
+#second{
+    margin-left: 10px;
+}
+#third{
+    margin-left: 10px;
+}
+#second button{
+    margin-bottom: 5px;
+}
+#third button{
+    margin-bottom: 5px;
+}
+#minibus{
+    background-color: pink;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+#coach{
+    background-color: pink;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+#minivan{
+    background-color: pink;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+#search-btn:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#minibus:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#coach:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#minivan:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
