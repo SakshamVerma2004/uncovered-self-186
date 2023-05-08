@@ -239,3 +239,8 @@ function searchBus(e) {
         console.log(error);
     })
 }
+
+let gstarted=document.getElementById("gstarted");
+    gstarted.addEventListener("click",function(){
+        window.location.href="#";
+})

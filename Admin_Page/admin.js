@@ -218,3 +218,8 @@ function createBcard(item){
     card.append(cardimg,cardbody,busname,price);
     return card;
 }
+
+let home=document.getElementById("home");
+home.addEventListener("click",function(){
+    window.location.href="..//index.html";
+})

@@ -58,3 +58,8 @@ btn.addEventListener("click",function(){
 days.addEventListener("input",function(){
     sum.value=days.value*price;
 })
+
+let gstarted=document.getElementById("gstarted");
+    gstarted.addEventListener("click",function(){
+        window.location.href="#";
+})
