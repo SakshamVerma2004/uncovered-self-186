@@ -2,6 +2,17 @@ let UserData=JSON.parse(localStorage.getItem("Userdata"))||[];
 let data=JSON.parse(localStorage.getItem("bookdata"))||[];
 let photo=document.getElementById("photo");
 let main=document.getElementById("main");
+
+
+// let nameinp=document.getElementById("nameinp");
+// let emailinp=document.getElementById("emailinp");
+// let mobileinp=document.getElementById("mobileinp");
+// let start=document.getElementById("start");
+// let end=document.getElementById("end");
+// let accinp=document.getElementById("accinp");
+// let cvvinp=document.getElementById("cvvinp");
+
+
 function showdata(){
     photo.innerHTML="";
     console.log(data);
@@ -27,15 +38,6 @@ function showdata(){
     }
 }
 showdata();
-let m=UserData.length;
-let nameinp=document.getElementById("nameinp");
-let emailinp=document.getElementById("emailinp");
-let mobileinp=document.getElementById("mobileinp");
-let start=document.getElementById("start");
-let end=document.getElementById("end");
-let accinp=document.getElementById("accinp");
-let cvvinp=document.getElementById("cvvinp");
-console.log(UserData[UserData.length-1]);
 
 let n=data.length-1;
 let days=document.getElementById("days");
@@ -51,7 +53,7 @@ btn.addEventListener("click",function(){
     else{
         alert(`You Have Successfully booked a vehicle with a name ${data[n].name} . You will recieve the respective notifications as well.`);
         setTimeout(function(){
-            window.location.href = '/index.html'
+            window.location.href = '..//index.html';
            },3000)
     }
     
