@@ -17,10 +17,91 @@ let addBus=document.getElementById("addBusBtn");
 
 addCars.addEventListener("click",function(){
     console.log("Cars")
+    addCarsfun()
 });
+function addCarsfun(){
+    let Cobj={
+        "ratings": ratings.value,
+        "trips": trips.value,
+        "name": name.value,
+        "type": type.value,
+        "emission": emission.value,
+        "seats": seats.value,
+        "price": price.value,
+        "image": image.value,
+        "category": category.value,
+        "airbags": airbags.value,
+        "sunroof": sunroof.value,
+        "cruisecontrol": CruiseControl.value,
+        "camera": Camera.value,
+        "ac": ac.value
+      }
+    let response=fetch("https://carsapi-mauve.vercel.app/data", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Cobj)
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        appenddata(data)
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+}
+
+
+let ABratings=document.getElementById("ABratings");
+let ABtrips=document.getElementById("ABtrips");
+let ABname=document.getElementById("ABname");
+let ABemission=document.getElementById("ABemission");
+let ABseats=document.getElementById("ABseats");
+let ABprice=document.getElementById("ABprice");
+let ABimage=document.getElementById("ABimage");
+let ABcategory=document.getElementById("ABcategory");
+let ABCamera=document.getElementById("ABCamera");
+let ABac=document.getElementById("ABac");
 addBus.addEventListener("click",function(){
-    console.log("Bus")
+    console.log(data);
+    addBusfun()
 });
+
+function addBusfun(){
+    let Bobj={
+        "ratings": ABratings.value,
+        "trips": ABtrips.value,
+        "name": ABname.value,
+        "emission": ABemission.value,
+        "seats": ABseats.value,
+        "price": ABprice.value,
+        "image": ABimage.value,
+        "category": ABcategory.value,
+        "camera": ABCamera.value,
+        "ac": ABac.value
+      }
+    let response=fetch("https://bus-api-henna.vercel.app/busData", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Bobj)
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        appendBdata(data)
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+}
 
 //********************************* */
 let data=JSON.parse(localStorage.getItem("bookdata"))||[];
@@ -39,7 +120,7 @@ function fetchCardata(){
         return res.json();
     })
     .then(function(data){
-        //console.log(data);
+        console.log(data);
         appenddata(data);
     })
 }
@@ -211,10 +292,101 @@ function createBcard(item){
     booknow.addEventListener("click",function(){
         Busid.value=item.id
         console.log("Bus",item.id)
+        EditCar(item.id)
     });
 
     price.append(money,booknow);
 
     card.append(cardimg,cardbody,busname,price);
     return card;
+}
+//EDIT CAR
+let ECratings=document.getElementById("ECratings");
+let ECtrips=document.getElementById("ECtrips");
+let ECname=document.getElementById("ECname");
+let ECtype=document.getElementById("ECtype");
+let ECemission=document.getElementById("ECemission");
+let ECseats=document.getElementById("ECseats");
+let ECprice=document.getElementById("ECprice");
+let ECimage=document.getElementById("ECimage");
+let ECcategory=document.getElementById("ECcategory");
+let ECairbags=document.getElementById("ECairbags");
+let ECsunroof=document.getElementById("ECsunroof");
+let ECCruiseControl=document.getElementById("ECCruiseControl");
+let ECCamera=document.getElementById("ECCamera");
+let ECac=document.getElementById("ECac");
+let EaddCarsBtn=document.getElementById("EaddCarsBtn");
+EaddCarsBtn.addEventListener("click",function(){
+    //EditCar(carid.value)
+})
+
+function EditCar(id){
+    let ECOBJ={
+        "ratings": ECratings.value,
+        "trips": ECtrips.value,
+        "name": ECname.value,
+        "type": ECtype.value,
+        "emission": ECemission.value,
+        "seats": ECseats.value,
+        "price": ECprice.value,
+        "image": ECimage.value,
+        "category": ECcategory.value,
+        "airbags": ECairbags.value,
+        "sunroof": ECsunroof.value,
+        "cruisecontrol": ECCruiseControl.value,
+        "camera": ECCamera.value,
+        "ac": ECac.value
+      }
+    let response=fetch(`https://carsapi-mauve.vercel.app/data/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(ECOBJ)
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+}
+
+//EDIT BUS
+let EditBusBtn=document.getElementById("EditBusBtn");
+EditBusBtn.addEventListener("click",function(){
+    EditBus(Busid.value)
+})
+function EditBus(id){
+    let EBOBJ={
+        "ratings": document.getElementById("EBratings").value,
+        "trips": document.getElementById("EBtrips").value,
+        "name": document.getElementById("EBname").value,
+        "emission": document.getElementById("EBemission").value,
+        "seats": document.getElementById("EBseats").value,
+        "price": document.getElementById("EBprice").value,
+        "image": document.getElementById("EBimage").value,
+        "category": document.getElementById("EBcategory").value,
+        "camera": document.getElementById("EBCamera").value,
+        "ac": document.getElementById("EBac").value
+        }
+    let response=fetch(`https://bus-api-henna.vercel.app/busData/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(EBOBJ)
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
 }
