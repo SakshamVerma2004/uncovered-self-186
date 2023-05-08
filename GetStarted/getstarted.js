@@ -1,4 +1,4 @@
-let UserData=JSON.parse(localStorage.getItem("Userdata"))||[];
+// let UserData=JSON.parse(localStorage.getItem("Userdata"))||[];
 const button = document.getElementById('enterDetailsbtn');
 const form = document.getElementById('myForm');
 
@@ -26,7 +26,7 @@ detailsSubmitBtn.addEventListener("click",function(){
         Destination:document.getElementById("Destination").value,
         tilldate:document.getElementById("tilldate").value
     }
-    UserData.push(obj)
+    UserData.push(obj);
     localStorage.setItem("UserData",JSON.stringify(UserData));
     window.location.reload()
 })
