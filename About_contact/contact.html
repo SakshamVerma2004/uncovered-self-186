@@ -76,6 +76,7 @@ nav>div:nth-child(1)>h2>span{
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    font-size: 20px;
   }
   .dropdown-content {
     display: none;
@@ -109,6 +110,7 @@ nav>div:nth-child(1)>h2>span{
     gap: 35px;
     justify-content: end;
     padding-right: 50px;
+    font-size: 20px;
 }
 #content>button{
     border: 1px solid black;
@@ -299,7 +301,7 @@ html {
     cursor: pointer;
 }
 #home img{
-    height:90px;
+    height:80px;
 }
 #log{
     text-decoration: none;
@@ -331,7 +333,7 @@ html {
         
         <button><a id="log" href="..//Signup_Page/Signup.html">Login</a></button>
         <div id="btn_2">
-            <button>Get Started</button>
+            <button id="gstarted">Get Started</button>
         </div>   
     </ul>
     </nav>
@@ -476,5 +478,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     } );
+    let gstarted=document.getElementById("gstarted");
+    gstarted.addEventListener("click",function(){
+        window.location.href="#";
+    })
 </script>
 </html>

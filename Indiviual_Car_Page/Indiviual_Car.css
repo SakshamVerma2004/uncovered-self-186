@@ -244,10 +244,10 @@ nav>div:nth-child(1)>h2>span{
 }
 #hidden{
     text-align: center;
-    color: black;
+    color: red;
     font-weight: 600;
-    text-decoration: underline;
     margin-top: 10px;
+    font-size: 15px;
 }
 @media only screen and (max-width:800px){
     #btn{

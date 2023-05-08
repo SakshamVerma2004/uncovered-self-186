@@ -29,4 +29,8 @@ detailsSubmitBtn.addEventListener("click",function(){
     localStorage.setItem("UserData",JSON.stringify(UserData));
     window.location.reload()
 })
-  
+
+let home=document.getElementById("home");
+home.addEventListener("click",function(){
+  window.location.href="..//index.html";
+})

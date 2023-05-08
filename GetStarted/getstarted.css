@@ -27,6 +27,14 @@ body{
     width: 90%;
     margin-left: 5%;
 }
+#logo{
+    height:80px;
+    width:100px;
+}
+body button{
+    display: block;
+    margin: auto;
+}
 #enterDetailsbtn{
     width: 60%;
     height: 40px;
