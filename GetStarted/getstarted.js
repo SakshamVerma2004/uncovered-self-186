@@ -1,3 +1,4 @@
+let UserData=JSON.parse(localStorage.getItem("Userdata"))||[];
 const button = document.getElementById('enterDetailsbtn');
 const form = document.getElementById('myForm');
 
@@ -14,7 +15,7 @@ window.addEventListener('click', function(event) {
 
 let detailsSubmitBtn=document.getElementById("detailsSubmitBtn");
 detailsSubmitBtn.addEventListener("click",function(){
-    let UserData=[]
+  let UserData=[];
     let obj={
         name:document.getElementById("name").value,
         email:document.getElementById("email").value,

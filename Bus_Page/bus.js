@@ -19,6 +19,17 @@ function fetchdata(Page){
     })
     .then(function(data){
         console.log(data);
+        let sort1 = document.getElementById("lth");
+        sort1.addEventListener("click", function(){
+            let lthdata=data.sort(function(a,b){return a.price-b.price});
+            appenddata(lthdata);
+        });
+
+        let sort2 = document.getElementById("htl");
+        sort2.addEventListener("click", function(){
+            let htldata=data.sort(function(a,b){return b.price-a.price});
+            appenddata(htldata);
+        });
         appenddata(data);
     })
 }
@@ -123,40 +134,6 @@ function createcard(item){
     return card;
 }
 
-let sort1=document.getElementById("lth");
-sort1.addEventListener("click",sortlth);
-function sortlth(e){
-    e.preventDefault();
-    fetch(`${BusURl}?_sort=price&_order=desc`)
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(data){
-        console.log(data);
-        appenddata(data);
-    })
-    .catch(function(error){
-        console.log(error);
-    })
-}
-
-let sort2=document.getElementById("htl");
-sort2.addEventListener("click",sorthtl);
-function sorthtl(e){
-    e.preventDefault();
-    fetch(`${BusURl}?_sort=price&_order=asc`)
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(data){
-        console.log(data);
-        appenddata(data);
-    })
-    .catch(function(error){
-        console.log(error);
-    })
-}
-
 let minibus=document.getElementById("minibus");
 minibus.addEventListener("click",fminibus);
 function fminibus(e){
@@ -242,5 +219,5 @@ function searchBus(e) {
 
 let gstarted=document.getElementById("gstarted");
     gstarted.addEventListener("click",function(){
-        window.location.href="#";
+        window.location.href="..//GetStarted/getstarted.html";
 })
