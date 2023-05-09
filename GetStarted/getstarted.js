@@ -1,3 +1,4 @@
+// let UserData=JSON.parse(localStorage.getItem("Userdata"))||[];
 const button = document.getElementById('enterDetailsbtn');
 const form = document.getElementById('myForm');
 
@@ -14,7 +15,7 @@ window.addEventListener('click', function(event) {
 
 let detailsSubmitBtn=document.getElementById("detailsSubmitBtn");
 detailsSubmitBtn.addEventListener("click",function(){
-    let UserData=[]
+  let UserData=[];
     let obj={
         name:document.getElementById("name").value,
         email:document.getElementById("email").value,
@@ -25,8 +26,12 @@ detailsSubmitBtn.addEventListener("click",function(){
         Destination:document.getElementById("Destination").value,
         tilldate:document.getElementById("tilldate").value
     }
-    UserData.push(obj)
+    UserData.push(obj);
     localStorage.setItem("UserData",JSON.stringify(UserData));
     window.location.reload()
 })
-  
+
+let home=document.getElementById("home");
+home.addEventListener("click",function(){
+  window.location.href="..//index.html";
+})

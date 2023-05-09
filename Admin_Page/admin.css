@@ -7,30 +7,42 @@
     height: 35px;
     margin-left: 20px;
     background-color: #005cd5;
+    color: white;
     border-radius: 6px;
-    border: 3px solid gold;
 }
 #busData{
     width: 10%;
     height: 35px;
     margin-left: 20px;
-    background-color: cornflowerblue;
+    background-color: #005cd5;
+    color: white;
     border-radius: 6px;
-    border: 3px solid gold;
+}
+#home{
+    width:10%;
+    height:35px;
+    margin-left: 20px;
+    background-color: #005cd5;
+    color: white;
+    border-radius: 6px;
 }
 #pageTitle{
     width: 20%;
-    border: 0px solid red;
-    margin-left: 20%;
+    margin-left: 17%;
+    color: red;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 h1{
     text-align: center;
 }
 #h1{
-    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 700;
+
 }
 #container{
-    border: 0px solid red;
     display: flex;
 }
 #dataInject{
@@ -38,7 +50,7 @@ h1{
     width: 24%;
 }
 #dataContainer{
-    border: 1px solid rgb(0, 255, 34);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-left: 2%;
     width: 74%;
 }
@@ -46,7 +58,35 @@ h1{
     display: grid;
     gap: 10px;
     padding: 10px;
-    border: 3px solid red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#addCarsBtn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px;
+}
+#EaddCarsBtn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px;
+}
+#addBusBtn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px;
+}
+#addBusBtn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px;
 }
 #addCars > input{
     margin-top: -1px;
@@ -56,7 +96,7 @@ h1{
     display: grid;
     gap: 10px;
     padding: 10px;
-    border: 3px solid red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #EditCars > input{
     margin-top: -1px;
@@ -66,13 +106,13 @@ h1{
     display: grid;
     gap: 10px;
     padding: 10px;
-    border: 3px solid rgb(0, 8, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #EditBus{
     display: grid;
     gap: 10px;
     padding: 10px;
-    border: 3px solid rgb(0, 8, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /* ------------------ */
 .card-list{

@@ -300,6 +300,7 @@ function createBcard(item){
     card.append(cardimg,cardbody,busname,price);
     return card;
 }
+
 //EDIT CAR
 let ECratings=document.getElementById("ECratings");
 let ECtrips=document.getElementById("ECtrips");
@@ -390,3 +391,8 @@ function EditBus(id){
         console.error( error);
       });
 }
+
+let home=document.getElementById("home");
+home.addEventListener("click",function(){
+    window.location.href="..//index.html";
+})
