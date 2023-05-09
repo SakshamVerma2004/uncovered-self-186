@@ -384,9 +384,9 @@ function EditBus(id){
         return response.json();
       })
       .then(data => {
-        console.log(data);
+        //console.log(data);
       })
       .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
+        console.error( error);
       });
 }
