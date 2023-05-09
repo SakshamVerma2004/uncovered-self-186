@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,21 @@
     <title>MWENDO INDIA</title>
 </head>
 <style>
-    *{
+   *{
     margin: 0;
-    padding: 0;
+  padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #f7f7f7;
+    background: #fff;
 }
-
+#home img{
+    height:80px;
+}
+#log{
+    text-decoration: none;
+    color:blue;
+}
 /* ---------------Nav-bar--------------- */
 nav{
     display: flex;
@@ -31,9 +38,9 @@ nav{
     left: 0;
 }
 nav>div:nth-child(1){
-    width: 30%;
+    width: 30%;;
     display: flex;
-    /*border: 1px red solid;*/ 
+   /* border: 1px red solid; */
 }
 nav>div:nth-child(1)>img{
     width: 20%;
@@ -62,7 +69,17 @@ nav>div:nth-child(1)>h2>span{
     /* border: 1px red solid; */
       color: #005cd5;
 }
-
+/* -----------slider-starts---------------- */
+/* .Resource_subcontent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: -1;
+}
+.Resource_subcontent>a{
+    text-decoration: none;
+    color: black;
+} */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -76,8 +93,9 @@ nav>div:nth-child(1)>h2>span{
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    font-size: 20px;
+
   }
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -102,7 +120,7 @@ nav>div:nth-child(1)>h2>span{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
+/* -----------slider-ends---------------- */
 #content{
     /* border: 1px red solid; */
     display: flex;
@@ -110,7 +128,7 @@ nav>div:nth-child(1)>h2>span{
     gap: 35px;
     justify-content: end;
     padding-right: 50px;
-    font-size: 20px;
+
 }
 #content>button{
     border: 1px solid black;
@@ -137,124 +155,120 @@ nav>div:nth-child(1)>h2>span{
     color: black;
 }
 
-/*map*/
-* { 
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
-} 
+/*main*/
 
-div { 
-    font-family: "Open Sans" !important;
-} 
+.titletxt{
+    margin:2% 0% 2% 2%;
+    color: #004AAD;
+}
 
-.row { 
-    margin-right: -15px; 
-    margin-left: -15px;
-} 
+    /*map*/
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 
-.container { 
-    padding-right: 15px; 
-    padding-left: 15px; 
-    margin-right: auto; 
-    margin-left: auto;
-} 
+    div {
+        font-family: "Open Sans" !important;
+    }
 
-@media (min-width: 768px){ 
-  .container { 
-    width: 750px;
-  } 
-}     
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    section {
+        display: block;
+    }
 
-@media (min-width: 992px){ 
-  .container { 
-    width: 970px;
-  } 
-}     
+    .contactUs {
+        background: #f9f9f9;
+    }
 
-@media (min-width: 1200px){ 
-  .container { 
-    width: 1170px;
-  } 
-}     
+    body {
+        margin: 0;
+        font-family: "Open Sans" !important;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #707070;
+        background-color: #fff;
+        overflow-x: hidden;
+        padding: 0 !important;
+        width: 100%;
+        min-width: 100%;
+    }
 
-@media only screen and (min-width: 1281px) and (max-width: 3450px){ 
-  .container { 
-    max-width: 1280px; 
-    width: 100%;
-  } 
-}     
+    html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size: 10px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
 
-@media only screen and (max-width: 3450px) and (min-width: 1281px){ 
-  .container { 
-    width: 1280px;
-  } 
-}     
+    .col-sm-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
-section { 
-    display: block;
-} 
+    @media (min-width: 768px) {
+        .col-sm-12 {
+            float: left;
+            width: 100%;
+        }
+    }
 
-.contactUs { 
-    background: #f9f9f9;
-} 
+    :after,
+    :before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 
-body { 
-    margin:      0;
-    font-family:  "Open Sans" !important;
-    font-size:     14px; 
-    line-height:     1.42857143; 
-    color:   #707070; 
-    background-color:     #fff;
-    overflow-x:   hidden;
-    padding:    0 !important; 
-    width:   100%; 
-    min-width:   100%;
-} 
-
-html { 
-    font-family:  sans-serif; 
-    -webkit-text-size-adjust:  100%; 
-    -ms-text-size-adjust:  100%;
-    font-size: 10px; 
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-} 
-
-.col-sm-12 { 
-    position: relative; 
-    min-height: 1px; 
-    padding-right: 15px; 
-    padding-left: 15px;
-} 
-
-@media (min-width: 768px){ 
-  .col-sm-12 { 
-    float:  left;
-    width: 100%;
-  } 
-}     
-
-:after,:before { 
-    -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
-} 
-
-:selection { 
-    background: #fff; 
-    color: #ce2127;
-} 
+    :selection {
+        background: #fff;
+        color: #ce2127;
+    }
 
 
-/* These were inline style tags. Uses id+class to override almost everything */
-#style-egL66.style-egL66 {  
-   border: 0;  
-}  
- 
+    /* These were inline style tags. Uses id+class to override almost everything */
+    #style-egL66.style-egL66 {
+        border: 0;
+    }
 
-/*footer*/
+    .container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 10%;
+        margin-bottom: 8%;
+        padding-top: 8%;
+    }
+    
+    .formside{
+        gap: 10%;
+        display: flex;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .helptxt{
+        padding-bottom: 57px;
+    }
+    .subbtn{
+        color: white;
+        background-color: #004AAD;
+        padding: 8px 20px 8px 20px;
+        border-radius: 5%;
+    }
 
-  #main_footer{
+
+
+
+   /* ----------------footer-------------- */
+#main_footer{
     /* border: 1px red solid; */
     width: 90%;
     margin: auto;
@@ -269,7 +283,7 @@ html {
 }
 #footer>img{
     width: 20%;
-    height: 40%;
+    height: 45%;
     /* border: 1px red solid; */
 }
 #footer>h2{
@@ -294,193 +308,267 @@ html {
     font-size: 15px;
     color:#8da9d1;
     padding: 5px;
+    cursor: pointer;
 }
 .footer_subdiv>p>i{
     /* border: 1px red solid; */
     margin-right: 10px;
     cursor: pointer;
 }
-#home img{
-    height:80px;
+/* -------------------------resposiveness---------------------- */
+@media screen and (max-width: 600px){
+    nav{
+        display: flex;
+        width: 220%;
+        padding: 5px 20px;
+        height: 80px;
+        
+       justify-content: space-between;
+        z-index: 2;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        left: 0;
+        
+    }
+    nav>div:nth-child(1){
+        width: 30%;
+        display: flex;
+        
+    }
+    nav>div:nth-child(1)>img{
+        width: 20%;
+        
+        
+    }
+    nav>div:nth-child(1)>h2{
+        
+        font-size: 20px;
+        padding-top: 25px;
+        margin-left: 15px;
+        color: #004AAD;
+    }
+    nav>div:nth-child(1)>h2>span{
+        color: #EFAB45;
+    }
+    #content>li{
+    display: none;
 }
-#log{
-    text-decoration: none;
-    color:blue;
+#content>button{
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 20px;
+    color: #004AAD;
+    background-color: white;
+    width: 80px;
+    font-size: 15px;
+}
+ .dropdown .dropbtn {
+    font-size: 15px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    /* border: 1px red solid; */
+    width: 150px;
+  }
+
+  /* ----------------footer-------------- */
+#main_footer{
+    /* border: 1px red solid; */
+    width: 100%;
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    width: 200%;
+    margin-left: 10%;
+}
+
 }
 </style>
+
 <body>
-    <!----navbar---->
+    <!------------------ nav-bar ----------------------->
     <nav>
         <div id="logo" onclick="goto('logo')">
             <a id="home" href="..//index.html"><img src="..//Signup_Page/travel-website-logo2.jpg" alt=""></a>
             <h2>MWENDO <span>INDIA</span></h2>
         </div>
         <ul id="content">
-        <li class="nav__link"><a class="nav__link" href="..//index.html" onclick="goto('logo')">Home</a></li>
-        <li class="nav__link"><a class="nav__link" href="./About.html">About</a></li>
-        
-        <div class="dropdown">
-            <button  class="dropbtn" >Resource 
-                <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="..//Cars_Page/Cars.html">Car rental</a>
-              <a href="..//Bus_Page/Bus.html">Bus Rental</a>
-              <a href="..//Bus_Page/Bus.html">Travel</a>
+            <li class="nav__link"><a class="nav__link" href="..//index.html" onclick="goto('logo')">Home</a></li>
+            <li class="nav__link"><a class="nav__link" href="./About.html">About</a></li>
+
+
+
+            <div class="dropdown">
+                <button class="dropbtn">Resource
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="..//Cars_Page/Cars.html">Car rental</a>
+                    <a href="..//Bus_Page/Bus.html">Bus Rental</a>
+                    <a href="..//Bus_Page/Bus.html">Travel</a>
+                </div>
             </div>
-        </div> 
-        <li class="nav__link"><a class="nav__link" href="./contact.html">Contact</a></li>
-        
-        <button><a id="log" href="..//Signup_Page/Signup.html">Login</a></button>
-        <div id="btn_2">
-            <button id="gstarted">Get Started</button>
-        </div>   
-    </ul>
+            <li class="nav__link"><a class="nav__link" href="./contact.html">Contact</a></li>
+
+            <button><a id="log" href="..//Signup_Page/Signup.html">Login</a></button>
+            <div id="btn_2">
+                <button id="gstarted">Get Started</button>
+            </div>
+
+        </ul>
     </nav>
 
-   <!--main-->
-   <div class="main_contact">
-    <h3>Contact Us:-</h3>
-    <div class="col-sm-12">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d845.0424104102209!2d77.07699582920723!3d28.447364798905717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d1d59025f5%3A0x957edd54fefe08aa!2sPune+India!5e1!3m2!1sen!2sin!4v1552380652496" width="100%" height="340" id="style-egL66" class="style-egL66">
-        </iframe>
-      </div>
-    <div class="container" >
-    <div class="customer_form">
-        <h3>CONTACT</h3>
-        <div class="leftform">
-            <input type="text" placeholder="Full Name*">
-            <input type="text" placeholder="Email*">
-            <input type="text" placeholder="Mobile*">
-            <input type="text" placeholder="Comments">
-            <input type="checkbox" id="agree" name="agree" >
-            <label for="agree"> I agree</label>
+    <!--main-->
+    <div class="main_contact">
+        <h1 class="titletxt">Contact Us:-</h1>
+        <div class="col-sm-12">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d845.0424104102209!2d77.07699582920723!3d28.447364798905717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d1d59025f5%3A0x957edd54fefe08aa!2sPune+India!5e1!3m2!1sen!2sin!4v1552380652496"
+                width="100%" height="340" id="style-egL66" class="style-egL66">
+            </iframe>
         </div>
-        <div class="rigthside">
-            <input type="text" placeholder="City Name">
-            <input type="text" placeholder="Address">
-            <input type="text" placeholder="How can we help you ?">
-            <span>*Mandatory Fields</span>
-        </div>
-        <button>SUBMIT</button>
-    </div>
-    <div class="office-detail">
-        <div class="addressoff" >
-            <h3>OFFICE ADDRESS</h3>
-            <div class="head-off">
-                <img src="https://www.avis.co.in/images/loc.png" alt="img">
-                <span>Head Office:</span>
-                <p>India Mwendo,Shriram park,Maharashtra-120033</p>
+        <div class="container">
+            <div class="customer_form">
+                <h3 style="color: #004AAD;">CONTACT</h3>
+                <div class="formside">
+                <div class="leftform">
+                    <blockquote><input type="text" placeholder="Full Name*"></blockquote>
+                    <blockquote><input type="text" placeholder="Email*"></blockquote>
+                    <blockquote><input type="text" placeholder="Mobile*"></blockquote>
+                    <blockquote><input type="text" placeholder="Comments"></blockquote>
+                    
+                </div>
+                <div class="rigthside">
+                    <blockquote><input type="text" placeholder="City Name"></blockquote>
+                    <blockquote><input type="text" placeholder="Address"></blockquote>
+                    <blockquote><input class="helptxt" type="text" placeholder="How can we help you ?"></blockquote>
+                </div>
             </div>
-            <div class="Reg-off">
-                <img src="https://www.avis.co.in/images/loc.png" alt="img">
-                <span>Registered Office:</span>
-                <p>4, Ravi Lane Delhi – 700001 CIN: U63011WB1995PTC058080</p>
+            <input type="checkbox" id="agree" name="agree">
+                    <label for="agree" style="color: #004AAD;"> I agree</label>
+                    <p style="color: red;">*Mandatory Fields</p>
+                <blockquote><button class="subbtn"><a href="#" style="color: white;text-decoration: none;">SUBMIT</a></button></blockquote>
+            </div>
+            <div class="office-detail">
+                <div class="addressoff">
+                    <h3 style="color: #004AAD;">OFFICE ADDRESS</h3>
+                    <div class="head-off">
+                        <img src="https://www.avis.co.in/images/loc.png" alt="img">
+                        <span style="color: #004AAD;">Head Office:</span>
+                        <p>India Mwendo,Shriram park,Maharashtra-120033</p>
+                    </div>
+                    <div class="Reg-off">
+                        <img src="https://www.avis.co.in/images/loc.png" alt="img">
+                        <span style="color: #004AAD;">Registered Office:</span>
+                        <p>4, Ravi Lane Delhi – 700001 CIN: U63011WB1995PTC058080</p>
+                    </div>
+                </div>
+                <div class="contactnum">
+                    <img src="https://www.avis.co.in/images/callicon.png" alt="">
+                    <span style="color: #004AAD;">91-124-4278288 (Calling from within India)</span><br>
+                    <img src="https://www.avis.co.in/images/callicon.png" alt="">
+                    <span style="color: #004AAD;">91-124-4378258 (Calling from within India)</span><br>
+                    <img src="https://www.avis.co.in/images/callicon.png" alt="">
+                    <span style="color: #004AAD;">91-124-4279285 (Calling from within India)</span><br>
+
+                    <img src="https://www.avis.co.in/images/map.png" alt="">
+                    <span style="color: #004AAD;">crs@indiamwendo.co.in</span><br>
+
+                    <img src="https://www.avis.co.in/images/map.png" alt="">
+                    <span style="color: #004AAD;">www.indmwendo.co.in</span><br>
+                </div>
+
             </div>
         </div>
-        <div class="contactnum">
-            <img src="https://www.avis.co.in/images/callicon.png" alt="">
-            <span>91-124-4278288 (Calling from within India)</span><br>
-            <img src="https://www.avis.co.in/images/callicon.png" alt="">
-            <span>91-124-4378258 (Calling from within India)</span><br>
-            <img src="https://www.avis.co.in/images/callicon.png" alt="">
-            <span>91-124-4279285 (Calling from within India)</span><br>
-
-            <img src="https://www.avis.co.in/images/map.png" alt="">
-            <span>crs@indiamwendo.co.in</span><br>
-
-            <img src="https://www.avis.co.in/images/map.png" alt="">
-            <span>www.indmwendo.co.in</span><br>
-        </div>
-
     </div>
 
-</div>
-
-
-    
-   </div>
-   
     <!------------------- footer-part ---------------->
-<footer id="main_footer">
-    <div id="footer" onclick="goto('logo')">
-        <img src="..//images/logo.jpg" alt=""><h2>MWENDO <span>INDIA</span></h2>
-    </div>
-    <div class="footer_subdiv">
-        <h1>Product</h1>
-        <p>Features</p>
-        <p>Pricing</p>
-        <p>Case Studies</p>
-        <p>Reviews</p>
-        <p>Updates</p>
-    </div>
-    <div class="footer_subdiv">
-        <h1>Company</h1>
-        <p>About</p>
-        <p>Contact us</p>
-        <p>Careers</p>
-        <p>Culture</p>
-        <p>Blogs</p>
-    </div>
-    <div class="footer_subdiv">
-        <h1>Support</h1>
-        <p>Getting started</p>
-        <p>Help</p>
-        <p>Server status</p>
-        <p>Report a bug</p>
-        <p>Chat support</p>
-    </div>
-    <div class="footer_subdiv">
-        <h1>Follow us</h1>
-        <p><i class="fa-brands fa-facebook-f"></i> Facebook</p>
-        <p><i class="fa-brands fa-twitter"></i> Twitter</p>
-        <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
-        <p><i class="fa-brands fa-linkedin-in"></i> Linkdin</p>
-        <p><i class="fa-brands fa-youtube"></i> YouTube</p>
-    </div>
-</footer>
+    <footer id="main_footer">
+        <div id="footer" onclick="goto('logo')">
+            <img src="..//images/logo.jpg" alt="">
+            <h2>MWENDO <span>INDIA</span></h2>
+        </div>
+        <div class="footer_subdiv">
+            <h1>Product</h1>
+            <p>Features</p>
+            <p>Pricing</p>
+            <p>Case Studies</p>
+            <p>Reviews</p>
+            <p>Updates</p>
+        </div>
+        <div class="footer_subdiv">
+            <h1>Company</h1>
+            <p>About</p>
+            <p>Contact us</p>
+            <p>Careers</p>
+            <p>Culture</p>
+            <p>Blogs</p>
+        </div>
+        <div class="footer_subdiv">
+            <h1>Support</h1>
+            <p>Getting started</p>
+            <p>Help</p>
+            <p>Server status</p>
+            <p>Report a bug</p>
+            <p>Chat support</p>
+        </div>
+        <div class="footer_subdiv">
+            <h1>Follow us</h1>
+            <p><i class="fa-brands fa-facebook-f"></i> Facebook</p>
+            <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+            <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
+            <p><i class="fa-brands fa-linkedin-in"></i> Linkdin</p>
+            <p><i class="fa-brands fa-youtube"></i> YouTube</p>
+        </div>
+    </footer>
 </body>
 <script>
-    function goto(page){
-    page.preventDefault()
-    if(page =="logo"){
-        window.location.href = '/index.html'
+    function goto(page) {
+        page.preventDefault()
+        if (page == "logo") {
+            window.location.href = '/index.html'
+        }
     }
-}
 
-function expandOptions(e){
-    e.querySelector('div').style.display = 'flex'
-   }   
-   function closeOptions(e){
-    e.querySelector('div').style.display = 'none'
-}
+    function expandOptions(e) {
+        e.querySelector('div').style.display = 'flex'
+    }
+    function closeOptions(e) {
+        e.querySelector('div').style.display = 'none'
+    }
 
-// -------------------navbar-name----------------------//
-document.addEventListener('DOMContentLoaded', function() {
-    const selector = '.nav__link';
-    const elems = Array.from( document.querySelectorAll( selector ) );
-    const navigation = document.getElementById('content');
-    
-    function makeActive( evt ) {
-      const target = evt.target;
-      
-      if ( !target || !target.matches( selector ) ) {
-        return;
-      }
-      
-      elems.forEach( elem => elem.classList.remove( 'active' ) );
-        
-        evt.target.classList.add( 'active' );
-    };
-    
-    
-    navigation.addEventListener( 'click', makeActive );
-    
-    
-    } );
-    let gstarted=document.getElementById("gstarted");
-    gstarted.addEventListener("click",function(){
-        window.location.href="#";
+    // -------------------navbar-name----------------------//
+    document.addEventListener('DOMContentLoaded', function () {
+        const selector = '.nav__link';
+        const elems = Array.from(document.querySelectorAll(selector));
+        const navigation = document.getElementById('content');
+
+        function makeActive(evt) {
+            const target = evt.target;
+
+            if (!target || !target.matches(selector)) {
+                return;
+            }
+
+            elems.forEach(elem => elem.classList.remove('active'));
+
+            evt.target.classList.add('active');
+        };
+
+
+        navigation.addEventListener('click', makeActive);
+
+
+    });
+    let gstarted = document.getElementById("gstarted");
+    gstarted.addEventListener("click", function () {
+        window.location.href = "#";
     })
 </script>
+
 </html>
