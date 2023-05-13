@@ -31,8 +31,9 @@ Having functionalities like search , filter by category and sort by price .
 # 6. Admin Page
 ![Screenshot_20230508_054222](https://user-images.githubusercontent.com/123861787/236820700-1dcc17b0-cc56-4945-9188-c821fd751ea3.png)
 Having functionalities like edit , add and delete any car and bus according to preference .
-#Collaborators:
+
+# Collaborators:
 1. Saksham Vema
-2. 2. Veerbhadhra
+2.  Veerbhadhra
 3. Siddesh Gore
 4. Sachina Pardhi
