@@ -1,4 +1,5 @@
 let data = JSON.parse(localStorage.getItem("signupdata")) || [];
+let signupData = JSON.parse(localStorage.getItem("signupdata")) || [];
 let submit = document.getElementById("submit");
 submit.addEventListener("click", checkdata);
 function checkdata(e) {
@@ -19,9 +20,11 @@ function checkdata(e) {
         if (flag === true) {
             alert("Your Provided information is Correct.You are being redirected to Homepage");
             window.location.href = "..//index.html";
+            localStorage.setItem("isLoggedin", "true");
         }
         else {
             alert("Please Provide Correct Information for Logging In");
+            localStorage.setItem("isLoggedin", "false");
         }
     }
 }
