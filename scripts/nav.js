@@ -1,7 +1,7 @@
 function goto(page){
     page.preventDefault()
     if(page =="logo"){
-        window.locatiSon.href = '/index.html'
+        window.location.href = './index.html'
     }
 }
 
@@ -35,9 +35,92 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     } );
+     //---------------------login to name--------------------------//
+    let data = JSON.parse(localStorage.getItem("signupdata")) || [];
+    let isLoggedin = JSON.parse(localStorage.getItem("isLoggedin")) || false;
+    
+    function goto(page) {
+      page.preventDefault();
+      if (page == "logo") {
+        window.location.href = './index.html';
+      }
+    }
+    
+    function expandOptions(e) {
+      e.querySelector('div').style.display = 'flex';
+    }
+    
+    function closeOptions(e) {
+      e.querySelector('div').style.display = 'none';
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const selector = '.nav__link';
+      const elems = Array.from(document.querySelectorAll(selector));
+      const navigation = document.getElementById('content');
+    
+      function makeActive(evt) {
+        const target = evt.target;
+    
+        if (!target || !target.matches(selector)) {
+          return;
+        }
+    
+        elems.forEach(elem => elem.classList.remove('active'));
+    
+        evt.target.classList.add('active');
+      };
+    
+      navigation.addEventListener('click', makeActive);
+    
+    });
+    
+    // Update the login function to change the text based on the isLoggedin status
+    function checkData(e) {
+      e.preventDefault();
+      let flag = false;
+      let cont = document.getElementById('cont');
+      let pass = document.getElementById('pass');
+    
+      for (let i = data.length - 1; i < data.length; i++) {
+        if (
+          (cont.value == data[i].number || cont.value == data[i].email) &&
+          pass.value == data[i].password
+        ) {
+          flag = true;
+        }
+      }
+    
+      if (cont.value == 'admin@gmail.com' && pass.value == 'admin') {
+        alert('Welcome Admin');
+        window.location.href = '..//Admin_Page/admin.html';
+      } else {
+        if (flag === true) {
+          alert('Your provided information is correct. You are being redirected to the homepage');
+          window.location.href = '..//index.html';
+          localStorage.setItem('isLoggedin', 'true'); // Set isLoggedin to true in local storage
+        } else {
+          alert('Please provide correct information for logging in');
+        }
+      }
+    }
+    
+    // Update the login status on page load
+    window.addEventListener('load', function() {
+      let isLoggedin = JSON.parse(localStorage.getItem('isLoggedin')) || false;
+      if (isLoggedin) {
+        let lastSignupData = data[data.length - 1];
+        let loginText = document.getElementById('log');
+        loginText.textContent = lastSignupData.name;
+      }
+    });
+
+    setTimeout(function() {
+      localStorage.setItem('isLoggedin', 'false');
+    }, 25 * 60 * 1000);
 
     //------------------- slider-----------------------------//
-  
+    
 const carousel = document.querySelector("[data-target='carousel']");
 const card = carousel.querySelector("[data-target='card']");
 const leftButton = document.querySelector("[data-action='slideLeft']");
