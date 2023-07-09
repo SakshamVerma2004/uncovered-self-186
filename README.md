@@ -1,7 +1,9 @@
 # Mwendo India
-Project Website completed by a team of 5 members within a span of 5 days . Tech stacks are HTML , CSS , Javascript.
+Project Website completed by a team of 5 members within a span of 5 days .
 # About
 Its is a vehicle renting website from which anyone having account can rent a vehicle from desired number of days .
+# Tech Stacks 
+Tech stacks are HTML , CSS , Javascript.
 # Pages in the website :
 1. Homepage
 2. About Page
